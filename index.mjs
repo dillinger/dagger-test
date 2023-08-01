@@ -26,3 +26,4 @@ connect(
       .export("./dist")
   },
   { LogOutput: process.stderr }
+)
