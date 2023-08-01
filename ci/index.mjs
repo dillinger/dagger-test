@@ -19,7 +19,7 @@ connect(async (client) => {
 
   // build application
   // write the build output to the host
-  const buildDir = runner
+  const buildDir = source
     .withExec(["npm", "run", "build"])
     .directory("./dist")
 
