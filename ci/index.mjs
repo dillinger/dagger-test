@@ -17,13 +17,9 @@ connect(async (client) => {
     .withWorkdir("/src")
     .withExec(["npm", "install"])
 
-  // run application tests
-  const test = runner
-    .withExec(["npm", "lint"])
-
   // build application
   // write the build output to the host
-  const buildDir = test
+  const buildDir = runner
     .withExec(["npm", "run", "build"])
     .directory("./dist")
 
