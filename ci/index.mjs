@@ -8,7 +8,7 @@ connect(async (client) => {
   // at /src in the container
   const source = client.container()
     .from("node:16-slim")
-    .withDirectory('/src', client.host().directory('.'),
+    .withDirectory('.', client.host().directory('.'),
       { exclude: ["node_modules/", "ci/"] })
 
   // set the working directory in the container
