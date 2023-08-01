@@ -1,8 +1,8 @@
-import Client, { connect } from "@dagger.io/dagger"
+import { connect } from "@dagger.io/dagger"
 
 // initialize Dagger client
 connect(
-  async (client: Client) => {
+  async (client) => {
     // get reference to the local project
     const source = client.host().directory(".", { exclude: ["node_modules/"] })
 
@@ -26,4 +26,3 @@ connect(
       .export("./dist")
   },
   { LogOutput: process.stderr }
-)
